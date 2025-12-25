@@ -1,0 +1,237 @@
+/* Import Reset CSS */
+@import url(./reset.css);
+
+/* Import Responsive */
+@import url(./responsive.css);
+
+/* Loader Style Start */
+
+#loader {
+    width: 100vw;
+    height: 100Vh;
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: Plain-regular;
+    padding: 16vh 10vw;
+
+    .loading_text {
+        overflow: hidden;
+        height: fit-content;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0.875rem 0;
+
+        h1 {
+            font-size: 6.5vw;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 0.9;
+        }
+
+        &:nth-child(3) {
+            h1 {
+                height: 8rem;
+            }
+        }
+    }
+
+
+
+    .counter {
+        width: 276px;
+        display: flex;
+        align-items: start;
+        margin-right: 100px;
+
+        h3 {
+            width: 100px;
+            font-size: 3.5vw;
+            font-family: silkserif-light;
+
+            &:nth-child(1) {
+                width: 122px;
+            }
+
+            &:nth-child(2) {
+                width: 152px;
+            }
+        }
+
+
+    }
+}
+
+#nowText {
+    animation-name: nowTextAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+
+
+}
+
+.loader_Waiting_text {
+    padding-inline: 22rem;
+    /* background-color: red; */
+    padding: 3rem 22rem;
+
+    p {
+        font-size: 1.2rem;
+    }
+
+}
+
+@keyframes nowTextAnimation {
+    0% {
+        font-family: Plain-regular;
+        color: #fff;
+        opacity: 1;
+    }
+
+    48% {
+        font-family: Plain-regular;
+        color: #fff;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: silkserif-light;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        opacity: 1;
+        font-weight: 500;
+    }
+
+    100% {
+        font-family: silkserif-light;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        opacity: 0;
+        font-weight: 500;
+    }
+}
+
+/* Loader Style End */
+
+/* Header Style Start */
+
+header {
+    padding: 3rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 2rem;
+
+    .nav_links {
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+}
+
+.header_nav {
+    width: 74.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.brand_name {
+    /* border: 1px solid #fff; */
+
+    p {
+        line-height: 1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+/* Header Style End */
+
+main {
+    height: 100vh;
+    background-color: #141414;
+}
+
+/* Hero Section Start  */
+
+#hero {
+    width: fit-content;
+    padding: 5rem 0;
+    padding-left: 33rem;
+}
+
+.hero_text {
+   
+    overflow: hidden;
+
+    h1 {
+        font-size: 7.2vw;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: url(../img/images/Flag.webp), auto;
+    }
+
+    &:nth-child(3) {
+        h1 {
+            display: flex;
+            gap: 2.1rem;
+            height: 150px;
+
+            span {
+                transition: all 0.1s ease;
+                
+
+                &:hover {
+                    color: #fff;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #fff;
+                    -webkit-text-fill-color: #000;
+                    
+                    
+                }
+                
+                &:nth-child(1){
+                    width: 30%;
+                    border-bottom: 10px solid #fff;
+                    
+                    &:hover{
+                        border-bottom: none;
+                    }
+                }
+                &:nth-child(2) {
+                    width:75%;
+                    border-bottom: 10px solid #fff;
+
+                    &:hover{
+                        border-bottom: none;
+                    }
+
+                    &::before {
+                        content: '/';
+                        margin-left: -2rem;
+                        -webkit-text-stroke-width: 0;
+                        -webkit-text-fill-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+
+/* Hero Section End */
